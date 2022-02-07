@@ -1,6 +1,8 @@
 import { Button, Typography } from '@mui/material';
-import React from 'react';
+import { onSnapshot, query, where } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { tempcollect } from '../firebase';
 import "./Header.css"
 function Header() {
   const history= useHistory()
@@ -10,7 +12,27 @@ function Header() {
     localStorage.removeItem("currentuser");
     history.push("/loginpage");
   };
+const user=JSON.parse(localStorage.getItem("currentuser"))
+  let temp1=query(tempcollect,where('userId','==',user.uid))
+  const[filedata,setFiledata]=useState("")
+  const[filephoto,setFilephoto]=useState("")
+  useEffect(() => {
+        onSnapshot(temp1,(e)=>{ 
+        e.docs.map((s)=>{ 
+              setFiledata(s.data().userName)
+              setFilephoto(s.data().userImage)
+        })
+        })
+  },[])
+if(filedata){
+localStorage.setItem('username',filedata) 
+}
+if(filephoto){
+  
+  const post={"userImage":filephoto}
+  localStorage.setItem('userimage',JSON.stringify(post)) 
 
+}
   return (
       <div className="header-main" 
       style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent: 'Space-around',width:'100vw'}}>

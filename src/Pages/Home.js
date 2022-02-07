@@ -11,29 +11,9 @@ import { tempcollect } from '../firebase';
 import "../Styles/Home.css"
 function Home() {
       const user=JSON.parse(localStorage.getItem("currentuser"))
-      const username=localStorage.getItem("username")
-      const userimage=JSON.parse(localStorage.getItem('userimage'))
-      let temp1=query(tempcollect,where('userId','==',user.uid))
-      const[filedata,setFiledata]=useState("")
-      const[filephoto,setFilephoto]=useState("")
-      useEffect(() => {
-            onSnapshot(temp1,(e)=>{ 
-            e.docs.map((s)=>{ 
-                  setFiledata(s.data().userName)
-                  setFilephoto(s.data().userImage)
-            })
-            })
-      },[])
-if(filedata){
-localStorage.setItem('username',filedata) 
-}
-if(filephoto){
-      
-      const post={"userImage":filephoto}
-      localStorage.setItem('userimage',JSON.stringify(post)) 
-
-}
-  const history =useHistory()
+      const history =useHistory()
+   
+  
   return (
         <>
         {

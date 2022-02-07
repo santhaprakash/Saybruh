@@ -56,6 +56,15 @@ function Mytab() {
       "@media (min-width:341px) and (max-width:370px)": {
         marginLeft: "100px !important",
       },
+      "@media (min-width:371px) and (max-width:420px)": {
+        marginLeft: "130px !important",
+      },
+      "@media (min-width:421px) and (max-width:460px)": {
+        marginLeft: "150px !important",
+      },
+      "@media (min-width:461px) and (max-width:480px)": {
+        marginLeft: "170px !important",
+      },
     },
   }));
 
@@ -72,7 +81,7 @@ function Mytab() {
             <Tab
               label="My posts"
               {...a11yProps(0)}
-              style={{ color: "white" }}
+              style={{ color: "white",display: "flex"}}
               className={classes.tabname}
             />
           </Tabs>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useHistory, Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -16,7 +16,7 @@ function Logins() {
  
  const history=useHistory()
  // login functionality
- 
+
 
 
  const submitHandler=async(e)=>{
@@ -35,6 +35,7 @@ await signInWithEmailAndPassword(auth, email, password)
  
 }
 const user = JSON.parse(localStorage.getItem("currentuser"))
+useEffect(() => {}, [user]);
   return (
   <>
   {

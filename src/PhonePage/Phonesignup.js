@@ -94,7 +94,7 @@ function Phonesignup() {
                   backgroundColor: "#EEC312",
                   color: "black",
                   marginBottom: "18px",
-                  fontWeight: "800",
+                  fontWeight:'600'
                 }}
               >
                 Sign up
@@ -107,7 +107,7 @@ function Phonesignup() {
                   backgroundColor: "#EEC312",
                   color: "white",
                   marginBottom: "18px",
-                  fontWeight: "800",
+                  fontWeight:'600'
                 }}
               >
                 <Link

@@ -57,7 +57,7 @@ function Addfriend() {
   }));
   const style = {
     position: "absolute",
-    top: "50%",
+    top: "30%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     bgcolor: "black",
@@ -99,7 +99,6 @@ function Addfriend() {
                   key={i}
                   style={{
                     marginBottom: "10px",
-                    height: "300px",
                     overflowY: "scroll",
                   }}
                 >

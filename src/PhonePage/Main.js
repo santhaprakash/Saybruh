@@ -63,17 +63,27 @@ function Main() {
       backgroundColor: "black",
       width: "100%",
     },
-    tab: {
-      "@media (min-width:321px)": {
-        margin: "0 -12px 0 -12px !important",
+  
+      "@media (min-width:390px) and (max-width:430px)": {
+       tab:{
+         margin:'0 -4px 0 -4px !important'
+       }
       },
-      "@media (max-width:320px)": {
-        margin: "0 -14px 0 -14px !important",
-      },
-      "@media (min-width:350px)": {
-        margin: "0 -10px 0 -10px !important",
-      },
-    },
+      "@media (min-width:370px) and (max-width:390px)": {
+        tab:{
+          margin:'0 -6px 0 -6px !important'
+        }
+       },
+       "@media (min-width:355px) and (max-width:370px)": {
+        tab:{
+          margin:'0 -8px 0 -8px !important'
+        }
+       },
+       "@media (max-width:355px)": {
+        tab:{
+          margin:'0 -12px 0 -12px !important'
+        }
+       },
   }));
 
   const classes = useStyles();

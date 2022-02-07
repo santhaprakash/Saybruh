@@ -70,7 +70,7 @@ function Phonelogin() {
                   backgroundColor: "#EEC312",
                   color: "black",
                   marginBottom: "18px",
-                  fontWeight: "800",
+                 fontWeight:'600'
                 }}
               >
                 Login
@@ -83,6 +83,7 @@ function Phonelogin() {
                   backgroundColor: "#EEC312",
                   color: "white",
                   marginBottom: "18px",
+                  fontWeight:'600'
                 }}
               >
                 <Link
@@ -90,7 +91,6 @@ function Phonelogin() {
                   style={{
                     color: "black",
                     textDecoration: "none",
-                    fontWeight: "800",
                   }}
                 >
                   Don't have an account Signup

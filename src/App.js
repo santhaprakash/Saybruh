@@ -59,7 +59,7 @@ function App() {
 
   const {width}=useWindowDimensions()
   {
-     if(width>380){
+     if(width>480){
       return(
          <>
        <ThemeProvider theme={theme}>
