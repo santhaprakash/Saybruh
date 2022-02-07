@@ -12,7 +12,6 @@ import "../Styles/Home.css"
 function Home() {
       const user=JSON.parse(localStorage.getItem("currentuser"))
       const history =useHistory()
-   
   
   return (
         <>

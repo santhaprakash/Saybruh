@@ -6,33 +6,29 @@ import { tempcollect } from '../firebase';
 import "./Header.css"
 function Header() {
   const history= useHistory()
-  const username = localStorage.getItem("username")
-  const userimage = JSON.parse(localStorage.getItem("userimage"))
+  const user = JSON.parse(localStorage.getItem("currentuser"));
+  const na=query(tempcollect,where("userId", "==", user.uid))
+  const[image,setImage]=useState("")
+  const[name,setName]=useState()
+  useEffect(() => {
+    onSnapshot(na,(e)=>{
+      e.docs.map((s)=>{
+        setImage(s.data().userImage)
+        setName(s.data().userName)
+      })
+    })
+  })
+  const post = {
+    userImage:
+      image
+  };
+  localStorage.setItem("userimage", JSON.stringify(post));
+  localStorage.setItem("username",name)
+  
   const handleLogout = () => {
     localStorage.removeItem("currentuser");
     history.push("/loginpage");
   };
-const user=JSON.parse(localStorage.getItem("currentuser"))
-  let temp1=query(tempcollect,where('userId','==',user.uid))
-  const[filedata,setFiledata]=useState("")
-  const[filephoto,setFilephoto]=useState("")
-  useEffect(() => {
-        onSnapshot(temp1,(e)=>{ 
-        e.docs.map((s)=>{ 
-              setFiledata(s.data().userName)
-              setFilephoto(s.data().userImage)
-        })
-        })
-  },[])
-if(filedata){
-localStorage.setItem('username',filedata) 
-}
-if(filephoto){
-  
-  const post={"userImage":filephoto}
-  localStorage.setItem('userimage',JSON.stringify(post)) 
-
-}
   return (
       <div className="header-main" 
       style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent: 'Space-around',width:'100vw'}}>
@@ -47,10 +43,10 @@ if(filephoto){
            </Link>
            </div>
            <div>
-           <Typography>Welcome {username}</Typography>
+           <Typography>Welcome {name}</Typography>
            </div>
            <div >
-          <img src={userimage.userImage} alt="" className="header-avatar div1"></img>
+          <img src={image} alt="" className="header-avatar div1"></img>
           <button style={{color:'white',backgroundColor:'#EEC312',padding:'7px'}} onClick={handleLogout}
           className="div2">Logout</button>
           </div>

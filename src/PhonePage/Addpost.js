@@ -36,7 +36,7 @@ function Addpost() {
           userName: username,
           userImage: userimage.userImage,
         });
-        console.log("added");
+        alert("Post added successfully")
       });
     });
   };

@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Feed from "./Feed";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
@@ -16,10 +16,12 @@ import Myprofile from "../PhonePage/Myprofile";
 import DuoIcon from "@mui/icons-material/Duo";
 import { useHistory } from "react-router-dom";
 import Addpost from "../PhonePage/Addpost.js";
+import { onSnapshot, query, where } from "firebase/firestore";
+import { tempcollect } from "../firebase";
 function Main() {
   const history = useHistory();
-  const user = localStorage.getItem("currentuser");
-
+  const user = JSON.parse(localStorage.getItem("currentuser"));
+  
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
