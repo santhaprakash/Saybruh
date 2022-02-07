@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Posts from './page/Posts';
+// import Posts from './page/Posts';
 import Logins from './Pages/Logins';
 import Signups from './Pages/Signups';
 import Home from './Pages/Home';
@@ -68,9 +68,9 @@ function App() {
                <Route exact path='/chat'>
                    <Chat />
                 </Route>
-                <Route exact path="/posts">      
+                {/* <Route exact path="/posts">      
                   <Posts />        
-                </Route>
+                </Route> */}
                 <Route exact path="/loginpage">
                    <Logins />
                 </Route>
