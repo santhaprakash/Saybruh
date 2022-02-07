@@ -1,0 +1,46 @@
+.container{
+    position:relative;
+    width:200px;
+    height:200px;
+
+}
+.overlay{
+    position:absolute;
+    transition:all .3s ease;
+    opacity:0;
+    background-color:rgba(0,0,0,0.4);
+    opacity:0;
+}
+.overlay-text{
+    position:absolute;
+    top:45%;
+    left:26%;
+    transform: translate(-50%,-50%);
+}
+.overlay-text2{
+    position:absolute;
+    top:40%;
+    left:33%
+}
+.overlay-text3{
+    position:absolute;
+    top:40%;
+    left:46%;
+}
+.overlay-text4{
+    position:absolute;
+    top:40%;
+    left:60%;
+}
+.overlay-left{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+}
+.container:hover .overlay-left{
+    height:100%;
+}
+.container:hover .overlay{
+    opacity:1;
+}

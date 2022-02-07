@@ -1,0 +1,59 @@
+.othercontainer {
+  position: relative;
+}
+.otheroverlay {
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.otheroverlay-text {
+  position: absolute;
+  top: 45%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+}
+.otheroverlay-text2 {
+  position: absolute;
+  top: 38%;
+  left: 37%;
+}
+.otheroverlay-text3 {
+  position: absolute;
+  top: 38%;
+  left: 51%;
+}
+.otheroverlay-text4 {
+  position: absolute;
+  top: 38%;
+  left: 70%;
+}
+.otheroverlay-left {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.othercontainer:hover .otheroverlay-left {
+  height: 100%;
+}
+.othercontainer:hover .otheroverlay {
+  opacity: 1;
+}
+
+.phonechat-input:focus {
+  border: 3px solid #555;
+}
+.phonechat-input {
+  width: 77vw;
+  border-radius: 20px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}

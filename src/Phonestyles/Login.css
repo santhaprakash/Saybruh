@@ -1,0 +1,24 @@
+.login-addpost-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45%;
+  padding: 15px;
+}
+.login-input {
+  width: 210px;
+  height: 37px;
+  border-radius: 10px;
+  font-size: 17px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  margin-right: 5px;
+}
+.login-input:focus {
+  border: 1px solid #eec312;
+}

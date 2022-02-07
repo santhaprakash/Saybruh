@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=EB+Garamond&family=Exo+2:wght@300&family=Indie+Flower&family=Lobster&family=Lora&family=Nanum+Myeongjo&family=Supermercado+One&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100&family=Playfair+Display&display=swap');
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: #010101;
+  color:#CBCCCE;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    scroll-behavior: smooth;
+}

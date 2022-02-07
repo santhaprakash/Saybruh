@@ -1,0 +1,63 @@
+.phoneborder {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#660066, #206a5d, #cc99cc);
+  border-radius: 50%;
+  padding: 2px;
+  margin: 5px 10px;
+}
+.phoneavatar {
+  margin-top: 2px;
+  margin-left: 1px;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.phoneroot {
+  display: flex;
+  margin-left: -15px;
+  width: 100vw;
+  height: 93px;
+  overflow-x: hidden;
+}
+.phoneroot:hover {
+  overflow-x: scroll;
+}
+.comment-input {
+  width: 210px;
+  height: 37px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  margin-right: 5px;
+}
+.comment-input:focus {
+  border: 2px solid #eec312;
+}
+@media (min-width: 330px) and (max-width: 340px) {
+  .comment-input {
+    width: 200px !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 329px) {
+  .comment-input {
+    width: 190px !important;
+  }
+}
+@media (min-width: 310px) and (max-width: 319px) {
+  .comment-input {
+    width: 180px !important;
+  }
+}
+@media (max-width: 309px) {
+  .comment-input {
+    width: 170px !important;
+  }
+}

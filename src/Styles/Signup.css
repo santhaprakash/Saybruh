@@ -1,0 +1,22 @@
+.main{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+.submain{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.form{
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color:sandybrown;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;    
+    margin-top: 12%;
+    padding-bottom: 3%;
+}
