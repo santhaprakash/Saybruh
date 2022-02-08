@@ -95,7 +95,7 @@ function Main() {
       {user ? (
         <Box style={{ overflow: "hidden" }}>
           <TabPanel value={value} index={0}>
-            <Feed />
+            {/* <Feed /> */}
           </TabPanel>
           <TabPanel value={value} index={1}>
             <Gallery />
