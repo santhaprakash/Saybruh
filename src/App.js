@@ -72,6 +72,9 @@ function App() {
            <Switch>    
            <Route exact path="/gallery">
                <Gallery/>
+              </Route>
+              <Route exact path="/addpost">
+               <Addpost/>
               </Route>   
                <Route exact path="/loginpage">
                  <Phonelogin />
@@ -88,9 +91,7 @@ function App() {
               <Route exact path="/chat/:id">
                <Message />
               </Route>
-              <Route exact path="/addpost">
-               <Addpost/>
-              </Route>
+              
              
            </Switch>
            </Router>
