@@ -6,12 +6,6 @@ import Feed3 from '../Phonecomponents/Feed3';
 import { onSnapshot, query, where } from "firebase/firestore";
 import { tempcollect } from "../firebase";
 function Feed() {
-  const user = JSON.parse(localStorage.getItem("currentuser"));
-  const na=query(tempcollect,where("userId", "==", user.uid))
-  const[image,setImage]=useState("")
-  const[name,setName]=useState("")
-
-
   return (
   <>
 <Feed1 />

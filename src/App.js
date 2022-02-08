@@ -59,41 +59,10 @@ function App() {
 
   const {width}=useWindowDimensions()
   {
-     if(width>480){
+     if(width<480){
       return(
          <>
-       <ThemeProvider theme={theme}>
-       <Router>
-          <Switch>
-               <Route exact path='/chat'>
-                   <Chat />
-                </Route>
-                {/* <Route exact path="/posts">      
-                  <Posts />        
-                </Route> */}
-                <Route exact path="/loginpage">
-                   <Logins />
-                </Route>
-                <Route exact path="/signuppage">
-                   <Signups />
-                </Route>
-                <Route exact path="/">
-                   <Home />
-                </Route>
-                <Route exact path="/:id">
-                   <Friendprofile />
-                </Route>
-               
-          </Switch>
-          </Router>
-          </ThemeProvider>
-          </>
-      )
-   }else{
-   
-      return(
-        <>
-        <ThemeProvider theme={theme}>
+           <ThemeProvider theme={theme}>
         <Router>
            <Switch>       
                <Route exact path="/loginpage">
@@ -114,6 +83,34 @@ function App() {
            </Switch>
            </Router>
            </ThemeProvider>
+      
+          </>
+      )
+   }else{  
+      return(
+        <>
+       <ThemeProvider theme={theme}>
+       <Router>
+          <Switch>
+               <Route exact path='/chat'>
+                   <Chat />
+                </Route>
+                <Route exact path="/loginpage">
+                   <Logins />
+                </Route>
+                <Route exact path="/signuppage">
+                   <Signups />
+                </Route>
+                <Route exact path="/">
+                   <Home />
+                </Route>
+                <Route exact path="/:id">
+                   <Friendprofile />
+                </Route>
+               
+          </Switch>
+          </Router>
+          </ThemeProvider>
            </>
       )
    }
