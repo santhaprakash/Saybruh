@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {getDoc,doc, query, where, onSnapshot, updateDoc, arrayUnion} from "firebase/firestore"
 import {tempcollect} from "../firebase"
-import { Button, Grid, Paper, Typography,Card, Avatar} from '@mui/material';
+import { Button, Grid, Paper, Typography,Card, Avatar, Box} from '@mui/material';
 import "./Suggestion.css"
 
 function Suggestion() {
@@ -47,8 +47,9 @@ function Suggestion() {
 
   return (
  <>
+ <Box style={{overflowY:'scroll',height:'100vh'}}>
  <Typography 
- style={{color: "#EA4C89",fontFamily: 'Lora',fontSize:"23px",marginBottom:"40px"}}
+ style={{color: "#EA4C89",fontFamily: 'Lora',fontSize:"23px",marginBottom:"40px",marginTop:'60px'}}
     >Let's Connect to the world...</Typography> 
     
     { 
@@ -79,7 +80,7 @@ function Suggestion() {
                                           
                                        
                                           <Typography 
-                                            style={{color:"#CBCCCE",fontFamily: 'Lora',fontSize:'20px'}}>{e.email.substring(0,e.email.length-10)}</Typography>
+                                            style={{color:"#CBCCCE",fontFamily: 'Lora',fontSize:'20px'}}>{e.userName}</Typography>
                                            
                                          
                                            
@@ -95,6 +96,7 @@ function Suggestion() {
                 })
 
             }
+            </Box>
   </>
     )
 }

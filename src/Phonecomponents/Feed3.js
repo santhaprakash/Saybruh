@@ -65,7 +65,7 @@ function Feed3() {
       });
       setData(post);
     });
-  }, []);
+  });
 
   // comment
   const handleSubmit = (e) => {
@@ -153,6 +153,12 @@ function Feed3() {
         left: "280px !important",
       },
     },
+    "@media (min-width:420px)": {
+     card:{
+       marginLeft:'0px !important',
+ marginRight: '0px !important'
+     }
+    },
   }));
 
   const classes = useStyles();
@@ -162,6 +168,7 @@ function Feed3() {
         return (
           <Card
             sx={{ maxWidth: 395 }}
+            className={classes.card}
             style={{
               paddingLeft: "4px",
               paddingRight: "4px",
@@ -174,14 +181,13 @@ function Feed3() {
             }}
             key={index}
           >
-            {e.userImage ? (
+            
               <Link to={`/${e.userId}`} style={{ textDecoration: "none" }}>
                 <Grid style={{ display: "flex", flexDirection: "row" }}>
                   <Avatar
                     style={{ margin: "8px", width: "35px", height: "35px" }}
                     src={e.userImage}
                   >
-                    {" "}
                   </Avatar>
                   <Grid
                     style={{
@@ -205,13 +211,6 @@ function Feed3() {
                   </Grid>
                 </Grid>
               </Link>
-            ) : (
-              <Link to={`/${e.userId}`}>
-                <Avatar src=""></Avatar>
-                <Typography>{e.userName}</Typography>
-              </Link>
-            )}
-
             {e.userId === user.uid ? (
               <IconButton>
                 <DeleteIcon

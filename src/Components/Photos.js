@@ -48,7 +48,7 @@ function Photos() {
             });
             setData(post);
           });
-        }, []);
+        },[]);
             
       // comment 
       const handleSubmit = (e) => {
@@ -112,7 +112,7 @@ function Photos() {
             }}
             key={index}
           >
-            {e.userImage ? (
+        
               <Link
                 to={`/${e.userId}`}
                 style={{ textDecoration: "none" }}
@@ -122,7 +122,6 @@ function Photos() {
                     style={{ margin: "8px", width: "55px", height: "55px" }}
                     src={e.userImage}
                   >
-                    {" "}
                   </Avatar>
                   <Grid
                     style={{
@@ -145,12 +144,7 @@ function Photos() {
                   </Grid>
                 </Grid>
               </Link>
-            ) : (
-              <Link to={`/${e.userId}`}>
-                <Avatar src=""></Avatar>
-                <Typography>{e.userName}</Typography>
-              </Link>
-            )}
+
 
             {e.userId === user.uid ? (
               <IconButton>

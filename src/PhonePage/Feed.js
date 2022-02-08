@@ -9,10 +9,12 @@ function Feed() {
   const user = JSON.parse(localStorage.getItem("currentuser"));
   const na=query(tempcollect,where("userId", "==", user.uid))
   const[image,setImage]=useState("")
-  const[name,setName]=useState()
+  const[name,setName]=useState("")
   useEffect(() => {
     onSnapshot(na,(e)=>{
       e.docs.map((s)=>{
+        console.log(s.data().userName);
+        console.log(s.data().userImage)
         setImage(s.data().userImage)
         setName(s.data().userName)
       })

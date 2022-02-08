@@ -41,6 +41,7 @@ function Phonesignup() {
       });
     } catch (error) {
       console.log(error);
+      alert(error);
     }
     setEmail(" ");
     setPassword(" ");

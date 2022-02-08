@@ -134,3 +134,9 @@
   outline: none;
   margin-right: 5px;
 }
+
+@media (max-width: 420px) {
+  .mypost-edit{
+    width:320px !important
+  }
+}

@@ -54,8 +54,8 @@ export default function VerticalTabs() {
     <div>
    
     <Box
-      sx={{ flexGrow: 1, display: 'flex', height: 580 ,backgroundColor:"#010101"}}
-      style={{position:"fixed",left:"0"}}
+      sx={{ flexGrow: 1, display: 'flex' ,backgroundColor:"#010101"}}
+      style={{position:"fixed",left:"0",height:'100vh'}}
     >
        
       <Tabs

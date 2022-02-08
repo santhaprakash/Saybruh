@@ -152,6 +152,7 @@ p:2
                          setOpen(true)
                         }} key={index}>
                       <img className="avatar" alt="" src={p.userImage} ></img>
+                      <h3>{p.userName}</h3>
                     </div> 
                     
                   </>

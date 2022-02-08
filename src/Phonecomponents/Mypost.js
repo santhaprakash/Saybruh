@@ -77,9 +77,12 @@ function Mypost() {
             );
           })
         ) : (
-          <h2 style={{ color: "white", marginLeft: "100px" }}>
+          <div style={{width:'350px',display: "flex",
+          flexDirection:'row',alignItems: 'center',justifyContent: 'center'}} className="mypost-edit">
+          <h2 style={{ color: "white"}}>
             No posts yet..!
           </h2>
+          </div>
         )}
       </div>
     </>

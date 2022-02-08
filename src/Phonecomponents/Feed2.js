@@ -136,9 +136,6 @@ function Feed2() {
               );
             })}
           </div>
-          {!mydata.stories && otherdata.map((e) => !e.stories) ? (
-            <h1 style={{ color: "white" }}>No stories</h1>
-          ) : null}
           {open ? (
             <>
               <Modal keepMounted open={open} onClose={handleClose}>
