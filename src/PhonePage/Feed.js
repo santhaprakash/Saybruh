@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 function Feed() {
   const history=useHistory()
   const homeRoute=()=>{
-    history.push('/gallery')
+    history.push('/addpost')
   }
   return (
   <>
