@@ -95,21 +95,9 @@ function Main() {
       {user ? (
         <Box style={{ overflow: "hidden" }}>
           <TabPanel value={value} index={0}>
-            {/* <Feed /> */}
+            <Feed />
           </TabPanel>
-          <TabPanel value={value} index={1}>
-            <Gallery />
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <Chat />
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <Addpost />
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-            <Myprofile />
-          </TabPanel>
-
+         
           <Tabs
             value={value}
             onChange={handleChange}
@@ -124,40 +112,7 @@ function Main() {
               {...a11yProps(0)}
               className={classes.tab}
             />
-            <Tab
-              icon={
-                <CollectionsIcon
-                  style={{ color: "#f1cf41", fontSize: "28px" }}
-                />
-              }
-              aria-label="phone"
-              {...a11yProps(1)}
-              className={classes.tab}
-            />
-            <Tab
-              icon={<DuoIcon style={{ color: "#f1cf41", fontSize: "28px" }} />}
-              aria-label="favorite"
-              {...a11yProps(2)}
-              className={classes.tab}
-            />
-            <Tab
-              icon={
-                <PostAddIcon style={{ color: "#f1cf41", fontSize: "28px" }} />
-              }
-              aria-label="person"
-              {...a11yProps(3)}
-              className={classes.tab}
-            />
-            <Tab
-              icon={
-                <AccountBoxIcon
-                  style={{ color: "#f1cf41", fontSize: "28px" }}
-                />
-              }
-              aria-label="person"
-              {...a11yProps(4)}
-              className={classes.tab}
-            />
+           
           </Tabs>
         </Box>
       ) : (
