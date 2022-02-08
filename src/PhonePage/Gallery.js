@@ -5,6 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { temp } from "../firebase";
+import Main from "./Main";
 
 function Gallery() {
   const [gallery, setGallery] = useState([]);
@@ -20,6 +21,7 @@ function Gallery() {
 
   return (
     <>
+    <Main/>
       <div>
         <Typography
           style={{
@@ -36,7 +38,7 @@ function Gallery() {
         </Typography>
         <Box
           sx={{ width: "100vw", height: "100vh", overflowY: "scroll" }}
-          style={{ marginLeft: "-24px", zIndex: "1000" }}
+          style={{zIndex: "1000" }}
         >
           <ImageList variant="masonry" cols={2} gap={3.5}>
             {gallery.map((item) => (

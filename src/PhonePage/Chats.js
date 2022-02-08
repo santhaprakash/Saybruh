@@ -9,6 +9,7 @@ import {  doc, } from 'firebase/firestore';
 
 import {Link} from 'react-router-dom'
 import "../Phonestyles/Addpoststyles.css"
+import Main from './Main';
 
 function Chats() {
   
@@ -70,7 +71,8 @@ const[search,setSearch]=useState('')
 
   return (
   <>
-   <Container >
+  <Main />
+   <Container style={{marginBottom:'60px',marginTop:'20px'}}>
 
      <input className="chat-search" type="text" value={search} style={{fontSize:'13px'}}
      onChange={(e)=>setSearch(e.target.value)} placeholder="Search by username"/>

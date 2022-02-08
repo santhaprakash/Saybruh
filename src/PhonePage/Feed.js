@@ -5,19 +5,30 @@ import Feed2 from '../Phonecomponents/Feed2';
 import Feed3 from '../Phonecomponents/Feed3';
 import { onSnapshot, query, where } from "firebase/firestore";
 import { tempcollect } from "../firebase";
-import { useHistory } from 'react-router-dom';
 function Feed() {
-  const history=useHistory()
-  const homeRoute=()=>{
-    history.push('/addpost')
-  }
+  const user = JSON.parse(localStorage.getItem("currentuser"));
+  const na=query(tempcollect,where("userId", "==", user.uid))
+  const[image,setImage]=useState("")
+  const[name,setName]=useState("")
+  useEffect(() => {
+    onSnapshot(na,(e)=>{
+      e.docs.map((s)=>{
+        setImage(s.data().userImage)
+        setName(s.data().userName)
+      })
+    })
+  },[])
+  const post = {
+    userImage:
+      image
+  };
+  localStorage.setItem("userimage", JSON.stringify(post));
+  localStorage.setItem("username",name)
+
+  
+
   return (
   <>
-           <div>
-          
-          <h1 onClick={homeRoute}>hey</h1>
-          
-          </div>
 <Feed1 />
 <Feed2 />
 <Feed3 />

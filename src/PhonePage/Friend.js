@@ -16,6 +16,7 @@ import { useHistory } from "react-router-dom";
 import { Avatar, Button, Card, Paper, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Otherpost from "../Phonecomponents/Otherpost";
+import Main from "./Main";
 function Friend() {
   const history = useHistory();
   const [friend, setFriend] = useState([]);
@@ -85,6 +86,7 @@ function Friend() {
 
   return (
     <>
+    <Main />
       {user ? (
         <>
           <div
@@ -92,6 +94,7 @@ function Friend() {
               display: "flex",
               flexDirection: "column",
               backgroundColor: "black",
+              marginTop:'20px'
             }}
           >
             {friend.map((e) => {

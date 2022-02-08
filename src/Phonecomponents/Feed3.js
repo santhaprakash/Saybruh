@@ -22,6 +22,7 @@ import {
   Typography,
   Button,
   Grid,
+  Container,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -153,17 +154,13 @@ function Feed3() {
         left: "280px !important",
       },
     },
-    "@media (min-width:420px)": {
-     card:{
-       marginLeft:'0px !important',
- marginRight: '0px !important'
-     }
-    },
+    
   }));
 
   const classes = useStyles();
   return (
     <>
+    <Container style={{marginBottom:'60px'}}>
       {data.map((e, index) => {
         return (
           <Card
@@ -176,8 +173,6 @@ function Feed3() {
               fontFamily: "'Lora', serif",
               backgroundColor: "#000000",
               padding: "5px",
-              marginLeft: "-15px",
-              marginRight: "-15px",
             }}
             key={index}
           >
@@ -375,6 +370,8 @@ function Feed3() {
           </Card>
         );
       })}
+    </Container>
+
     </>
   );
 }

@@ -22,6 +22,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { makeStyles } from "@mui/styles";
 import LinkedCameraIcon from "@mui/icons-material/LinkedCamera";
 import Mytab from "../Phonecomponents/Mytab";
+import Main from "./Main";
 function Myprofile() {
   const [editopen, setEditopen] = useState(false);
   const [bio, setBio] = useState("");
@@ -97,11 +98,13 @@ function Myprofile() {
   const classes = useStyles();
   return (
     <>
+    <Main />
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           backgroundColor: "black",
+          marginTop:'20px'
         }}
       >
         {profile.map((e) => {

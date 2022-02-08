@@ -57,6 +57,7 @@ function Feed1() {
           marginTop: "-15px",
           marginLeft: "-5px",
           backgroundColor: "black",
+          marginTop:'7px'
         }}
       >
         <div

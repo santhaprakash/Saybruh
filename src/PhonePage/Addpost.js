@@ -6,6 +6,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import "../Phonestyles/Addpoststyles.css";
 import { Box, Button } from "@mui/material";
+import Main from "./Main";
 function Addpost() {
   const [desc, setDesc] = useState("");
   const user = JSON.parse(localStorage.getItem("currentuser"));
@@ -53,6 +54,7 @@ function Addpost() {
   };
   return (
     <>
+    <Main />
       <Box sx={style}>
         <div className="addpost-main" style={{ marginTop: "-10px" }}>
           <form onSubmit={handlePostsubmit} className="phone-addpost-form">

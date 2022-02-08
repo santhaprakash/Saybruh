@@ -21,7 +21,7 @@ import { tempcollect } from "../firebase";
 function Main() {
   const history = useHistory();
   const user = JSON.parse(localStorage.getItem("currentuser"));
-
+  
 const homeRouter=()=>{
   history.push('/')
 }
@@ -41,7 +41,7 @@ const profileRouter=()=>{
     <>
       {user ? (
         <> 
-          <div style={{display: 'flex',flexDirection:'row',
+          <div style={{display: 'flex',flexDirection:'row',backgroundColor:'#191919',padding:'10px',
           alignItems:'center',justifyContent: 'space-between',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:'10000'}}T>
          <HomeIcon style={{fontSize:'35px'}} onClick={homeRouter}/>
          <CollectionsIcon style={{fontSize:'35px'}} onClick={galleryRouter}/>

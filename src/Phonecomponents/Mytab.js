@@ -47,19 +47,19 @@ function Mytab() {
   };
   const useStyles = makeStyles((theme) => ({
     tabname: {
-      "@media (min-width:300px) and (max-width:320px)": {
+      "@media (min-width:300px) and (max-width:321px)": {
         marginLeft: "80px !important",
       },
-      "@media (min-width:321px) and (max-width:340px)": {
+      "@media (min-width:321px) and (max-width:341px)": {
         marginLeft: "90px !important",
       },
-      "@media (min-width:341px) and (max-width:370px)": {
-        marginLeft: "100px !important",
+      "@media (min-width:341px) and (max-width:371px)": {
+        marginLeft: "110px !important",
       },
-      "@media (min-width:371px) and (max-width:420px)": {
+      "@media (min-width:371px) and (max-width:421px)": {
         marginLeft: "130px !important",
       },
-      "@media (min-width:421px) and (max-width:460px)": {
+      "@media (min-width:421px) and (max-width:461px)": {
         marginLeft: "150px !important",
       },
       "@media (min-width:461px) and (max-width:480px)": {

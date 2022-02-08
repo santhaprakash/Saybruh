@@ -89,35 +89,7 @@
   opacity: 1;
 }
 
-@media (min-width: 300px) and (max-width: 315px) {
-  .Phoneroot {
-    margin-left: -27px !important;
-  }
-}
 
-@media (min-width: 310px) and (max-width: 320px) {
-  .Phoneroot {
-    margin-left: -20px !important;
-  }
-}
-@media (min-width: 320px) and (max-width: 340px) {
-  .Phoneroot {
-    margin-left: -18px !important;
-    grid-gap: 15px !important;
-  }
-}
-@media (min-width: 340px) and (max-width: 360px) {
-  .Phoneroot {
-    margin-left: -12px !important;
-    grid-gap: 15px !important;
-  }
-}
-
-@media (max-width: 300px) {
-  .Phoneroot {
-    margin-left: -30px !important;
-  }
-}
 
 .chat-search {
   width: 100%;
