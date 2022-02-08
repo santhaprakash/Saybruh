@@ -106,8 +106,7 @@ function App() {
                 </Route>
                 <Route exact path="/:id">
                    <Friendprofile />
-                </Route>
-               
+                </Route>    
           </Switch>
           </Router>
           </ThemeProvider>

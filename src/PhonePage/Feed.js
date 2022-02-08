@@ -10,7 +10,7 @@ function Feed() {
   <>
 <Feed1 />
 <Feed2 />
-<Feed3 />
+{/* <Feed3 /> */}
   </>
     );
 }
