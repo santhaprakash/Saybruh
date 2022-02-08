@@ -72,8 +72,7 @@ function App() {
                <Route exact path="/signuppage">
                  <Phonesignup />
                </Route>
-               <Route exact path="/home">
-               
+               <Route exact path="/">              
                 <Feed />
               </Route>
               <Route exact path="/:id">
