@@ -13,6 +13,7 @@ import Phonelogin from './PhonePage/Phonelogin';
 import Phonesignup from './PhonePage/Phonesignup';
 import Friend from './PhonePage/Friend';
 import Message from './Phonecomponents/Message';
+import Feed from './PhonePage/Feed';
 const theme = createTheme({
    palette: {
      primary: {
@@ -71,8 +72,9 @@ function App() {
                <Route exact path="/signuppage">
                  <Phonesignup />
                </Route>
-               <Route exact path="/">
-                <Main />
+               <Route exact path="/home">
+               
+                <Feed />
               </Route>
               <Route exact path="/:id">
                 <Friend />
