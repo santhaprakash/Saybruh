@@ -16,6 +16,8 @@ import Message from './Phonecomponents/Message';
 import Feed from './PhonePage/Feed';
 import Addpost from './PhonePage/Addpost';
 import Gallery from './PhonePage/Gallery';
+import Chats from './PhonePage/Chats';
+import Myprofile from './PhonePage/Myprofile';
 const theme = createTheme({
    palette: {
      primary: {
@@ -69,30 +71,42 @@ function App() {
  
            <ThemeProvider theme={theme}>
         <Router>
-           <Switch>    
-           <Route exact path="/gallery">
-               <Gallery/>
+           <Switch>       
+           <Route exact path="/">              
+                <Main />
+                <Feed />
               </Route>
-              <Route exact path="/addpost">
-               <Addpost/>
-              </Route>   
+             <Route exact path="/addpost">
+               <Addpost />
+             </Route>
+             <Route exact path="/gallery">
+               <Gallery />
+               </Route>
+               <Route exact path="/chat">
+               <Chats />
+               </Route>
+               <Route exact path="/profile">
+                 <Myprofile />
+               </Route>
                <Route exact path="/loginpage">
                  <Phonelogin />
                </Route>
                <Route exact path="/signuppage">
                  <Phonesignup />
                </Route>
-               <Route exact path="/">              
-                <Feed />
-              </Route>
+               
               <Route exact path="/:id">
                 <Friend />
               </Route>
               <Route exact path="/chat/:id">
                <Message />
               </Route>
-              
-             
+              <Route exact path="/addpost">
+               <Addpost/>
+              </Route>
+              <Route exact path="/gallery">
+               <Gallery/>
+              </Route>
            </Switch>
            </Router>
            </ThemeProvider>
