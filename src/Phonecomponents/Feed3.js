@@ -65,7 +65,7 @@ function Feed3() {
       });
       setData(post);
     });
-  },[na]);
+  },[]);
 
   // comment
   const handleSubmit = (e) => {
