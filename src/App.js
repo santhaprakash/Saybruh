@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch, useHistory} from "react-router-dom";
 // import Posts from './page/Posts';
 import Logins from './Pages/Logins';
 import Signups from './Pages/Signups';
@@ -14,6 +14,8 @@ import Phonesignup from './PhonePage/Phonesignup';
 import Friend from './PhonePage/Friend';
 import Message from './Phonecomponents/Message';
 import Feed from './PhonePage/Feed';
+import Addpost from './PhonePage/Addpost';
+import Gallery from './PhonePage/Gallery';
 const theme = createTheme({
    palette: {
      primary: {
@@ -57,15 +59,20 @@ function useWindowDimensions() {
 
   
 function App() {
-
+ 
   const {width}=useWindowDimensions()
+ 
   {
      if(width<480){
       return(
          <>
+ 
            <ThemeProvider theme={theme}>
         <Router>
-           <Switch>       
+           <Switch>    
+           <Route exact path="/gallery">
+               <Gallery/>
+              </Route>   
                <Route exact path="/loginpage">
                  <Phonelogin />
                </Route>
@@ -81,6 +88,10 @@ function App() {
               <Route exact path="/chat/:id">
                <Message />
               </Route>
+              <Route exact path="/addpost">
+               <Addpost/>
+              </Route>
+             
            </Switch>
            </Router>
            </ThemeProvider>
