@@ -13,13 +13,11 @@ function Feed() {
   useEffect(() => {
     onSnapshot(na,(e)=>{
       e.docs.map((s)=>{
-        console.log(s.data().userName);
-        console.log(s.data().userImage)
         setImage(s.data().userImage)
         setName(s.data().userName)
       })
     })
-  })
+  },[])
   const post = {
     userImage:
       image
